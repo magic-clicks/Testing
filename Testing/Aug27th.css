@@ -1,3 +1,9 @@
+body{
+    background-color: lightblue;
+}
 .container {
-    color: purple;
+    color: black;
+    font-family: sans-serif;
+    font-size: 25px;
+    
 }
