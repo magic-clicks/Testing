@@ -1,0 +1,36 @@
+*{
+    font-family: sans-serif;
+    background-image: url(https://cdn12.picryl.com/photo/2016/12/31/macaroni-mac-and-cheese-cheese-food-drink-c40e5d-1024.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+header{
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 25px;
+}
+.first{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+
+}
+.second{
+    text-align: center;
+    list-style-position: inside;
+    font-size: 30px;
+    color: white;
+}
+.third{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    color: aquamarine;
+}

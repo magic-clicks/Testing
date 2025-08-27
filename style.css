@@ -1,0 +1,23 @@
+.box-one {
+    width: 700px;
+    height: 300px;
+    background-color: white;
+    box-sizing: content-box;
+    padding: 50px;
+    border: 30px solid black;
+}
+.box-two {
+    width: 700px;
+    height: 300px;
+    background-color: aquamarine;
+    box-sizing: border-box;
+    padding: 50px;
+    border: 30px solid black;
+}
+*{
+    background-color: pink;
+    color: black
+}
+button {
+    background-color: yellow;
+}

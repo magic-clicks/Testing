@@ -1,0 +1,14 @@
+*{
+    background: linear-gradient(lightblue, lightpink);
+    color: black;
+}
+.first {
+    text-align: center;
+}
+
+.second {
+    border: solid black 1px;
+    box-sizing: border-box;
+    padding: 10px;
+    
+}
