@@ -13,7 +13,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    
 }
 .header {
     box-sizing: border-box;
@@ -25,7 +25,8 @@
     background-color: #066aab;
     color: white;
     padding: 8px;
-    padding-right: 250px;
+    padding-right: 19%;
+    font-family: sans-serif;
 }
 .nav {
     display: flex;
@@ -36,17 +37,50 @@
     padding: 15px;
     font-size: 16px;
     font-weight: bold;
+    font-family: sans-serif;
 }
 .nav img {
     height: 80px;
     width: auto;
 }
 .photo img {
-    height: 400px;
+    height: 800px;
     width: stretch;
 }
 .about {
     display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap:50px;
+    padding-top: 2%;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: sans-serif;
+}
+.signupbox {
+    border: solid black 2px;
+    border-radius: 1%;
+    height: 500px;
+    width: 500px;
+    background-color: #2d2e30;
+    color: white;
+    font-family: cursive;
+    margin-bottom: 2%;
+    
+}
+.book {
+    background-color: #2d2e30;
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    padding: 1%;
+    
+}
+.book a {
+    text-decoration: none;
+    color: white;
 }
 </style>
 </head>
@@ -75,14 +109,18 @@
         <h1>Generic Golf Course</h1>
         </div>
         <div class="paragraph1">
-            <p>The par-72 layout at Generic Golf Course measures over 7000 yards from the back tees. It was designed by Magic Clicks</p>
+            <p>The par-72 layout at Generic Golf Course measures over 7000 yards from the back tees.</p>
         </div>
         <div class="paragraph2">
              <p>Many holes of the golf course bring together breathtaking views and the challenges of playing alongside the lake and moutians. The manageable length of our golf course and affordable anytime rates make Generic Golf Course your best choice for outdoor recreation.</p>
         </div>
         <div class="signupbox">
-            <p>box</p>
+            <h1>Join our E-Club!</h1>
         </div>
+        
+    </div>
+    <div class="book">
+            <h2><a href="" target="_blank">Book A Tee Time!</a></h2>
     </div>
 </body>
 </html>
