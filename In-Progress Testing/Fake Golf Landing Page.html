@@ -53,26 +53,27 @@
 .about {
     display: flex;
     box-sizing: border-box;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
-    gap:50px;
-    padding-top: 2%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding: 1%;
     font-family: sans-serif;
-    border: solid black 10px;
+}
+.golfcourse {
+    flex: 1;
 }
 .signupbox {
-    border: solid black 2px;
-    border-radius: 1%;
     height: 500px;
     width: 500px;
     background-color: #2d2e30;
     color: white;
     font-family: cursive;
-    margin-bottom: 2%;
     
+}
+.signupbox form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 50px;
 }
 .book {
     background-color: #2d2e30;
@@ -108,20 +109,23 @@
     <div class="photo">
         <img src="https://ygt-res.cloudinary.com/image/upload/c_fit,h_1280,q_80,w_1920/v1614084427/Venues/Whistler%20Golf%20Club/whistler-golf-club-1.jpg" alt="Photo of Golf Course">
     </div>
+
     <div class="about">
         <div class="golfcourse">
-        <h1>Generic Golf Course</h1>
-        </div>
-        <div class="paragraph1">
-            <p>The par-72 layout at Generic Golf Course measures over 7000 yards from the back tees.</p>
-        </div>
-        <div class="paragraph2">
-             <p>Many holes of the golf course bring together breathtaking views and the challenges of playing alongside the lake and moutians. The manageable length of our golf course and affordable anytime rates make Generic Golf Course your best choice for outdoor recreation.</p>
+            <div>
+                <h1>Generic Golf Course</h1>
+                <p>The par-72 layout at Generic Golf Course measures over 7000 yards from the back tees.</p>
+                <p>Many holes of the golf course bring together breathtaking views and the challenges of playing alongside the lake and moutians. The manageable length of our golf course and affordable anytime rates make Generic Golf Course your best choice for outdoor recreation.</p>
+            </div>
         </div>
         <div class="signupbox">
             <h1>Join our E-Club!</h1>
+            <form>
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </form>
         </div>
-        
     </div>
     <div class="book">
             <h2><a href="" target="_blank">Book A Tee Time!</a></h2>
