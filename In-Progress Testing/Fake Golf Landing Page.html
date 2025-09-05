@@ -53,27 +53,31 @@
 .about {
     display: flex;
     box-sizing: border-box;
-    text-align: center;
     padding: 1%;
     font-family: sans-serif;
+    flex-wrap: wrap;
 }
 .golfcourse {
     flex: 1;
+    line-height: 2;
+    text-align: center;
+    align-content: center;
+    font-size: 24px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
+
 .signupbox {
-    height: 500px;
-    width: 500px;
+    flex: 1;
     background-color: #2d2e30;
     color: white;
     font-family: cursive;
-    
-}
-.signupbox form {
+    text-align: center;
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    padding-top: 50px;
+    border-radius: 5%;
+}
+.signupbox button{
+    width: 75px;
 }
 .book {
     background-color: #2d2e30;
@@ -114,17 +118,24 @@
         <div class="golfcourse">
             <div>
                 <h1>Generic Golf Course</h1>
+                <br>
                 <p>The par-72 layout at Generic Golf Course measures over 7000 yards from the back tees.</p>
+                <br>
                 <p>Many holes of the golf course bring together breathtaking views and the challenges of playing alongside the lake and moutians. The manageable length of our golf course and affordable anytime rates make Generic Golf Course your best choice for outdoor recreation.</p>
             </div>
         </div>
         <div class="signupbox">
             <h1>Join our E-Club!</h1>
             <form>
+                <p>First Name</p>
                 <input type="text">
+                <p>Last Name</p>
                 <input type="text">
+                <p>Email</p>
                 <input type="text">
             </form>
+            <br>
+            <button>Submit</button>
         </div>
     </div>
     <div class="book">
