@@ -26,3 +26,18 @@
 .buttons:hover {
     background-color: aqua;
 }
+.randomNumberGenerator {
+    padding: 50px;
+    font-family: sans-serif;
+    text-align: center;
+}
+#myButton {
+    font-size: 25px;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+.myLabels {
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+}
