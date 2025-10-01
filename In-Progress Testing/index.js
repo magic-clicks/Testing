@@ -77,3 +77,80 @@ myButton.onclick = function (){
     label3.textContent = randomNum3;
 }
 
+// Next script for if statements - if statements = if a condition is true
+//execute some code. If not, do something else.
+
+let age = 18;
+
+if( age >= 18){
+    console.log("You are old enough to enter this site");
+}
+else {
+    console.log("You must be 18+ to enter this site");
+}
+
+//it's a fork in the road
+
+let time = 9;
+
+if(time < 12){
+    console.log("Good Morning");
+}
+else{
+    console.log("Good Afternoon");
+}
+
+let isStudent = false;
+if(isStudent){
+    console.log("You are a student");
+}
+else{
+    console.log("You are not a student");
+}
+
+
+let hasLicense = false;
+
+if(age > 16){
+    console.log("You are old enough to drive");
+
+    if(hasLicense){
+        console.log("You have your license")
+    }
+    else{
+        console.log("You do not have your license")
+    }
+    
+}
+else{
+    console.log("You must be 16+ to drive");
+}
+
+
+
+const ageBox = document.getElementById("ageBox");
+const ageSubmit = document.getElementById("ageSubmit");
+const resultElement = document.getElementById("resultElement");
+
+ageSubmit.onclick = function (){
+    age = ageBox.value;
+    age = Number(age);
+    
+    if(age == 0){
+        resultElement.textContent = "You can't enter. You were just born";
+    }
+    else if(age <0){
+        resultElement.textContent = "Your age can't be below 0";
+    }
+    else if(age >=100){
+        resultElement.textContent = "You are too old to enter this site";
+    }
+    else if(age >= 18){   
+    resultElement.textContent = "You are old enough to enter this site";
+    }
+    else{
+        resultElement.textContent = "You must be 18+ to enter this site";
+    }
+}
+
+// 
