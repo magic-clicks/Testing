@@ -1,0 +1,28 @@
+.circleRadius {
+    text-align: center;
+    padding: 50px;
+}
+.numberCounter {
+    padding: 50px;
+}
+#countLabel {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+#btnContainer {
+    text-align: center;
+}
+.buttons {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: black;
+    background-color:beige;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.buttons:hover {
+    background-color: aqua;
+}
