@@ -17,6 +17,17 @@ document.getElementById("mySubmit").onclick = function(){
 
 }
 
+const submitReset = document.getElementById("submitReset");
+let myText = document.getElementById("mytext");
+
+submitReset.onclick = function(){
+    document.getElementById("myH3").textContent = "";
+    document.getElementById("myText").value = "";
+}
+
+
+// Next Script for number counter
+
 const decreaseBtn = document.getElementById("decreaseBtn");
 const resetBtn = document.getElementById("resetBtn");
 const increaseBtn = document.getElementById("increaseBtn");
