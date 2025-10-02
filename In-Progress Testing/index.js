@@ -210,5 +210,106 @@ residentSubmit.onclick = function(){
     }
 }
 
-// Next script 
+// Next script ternary operator it's a shortcut to if and else statements
+//helps to assign a veriabled based on a condition
+
+
+//condition ? codeiftrue : codeiffale
+
+let Age = 21;
+
+let message = Age >= 18 ? "You're an adult" : "You're a minor";
+
+console.log(message);
+
+//This would be saying the exact same thing as:
+// if (Age >= 18){
+//    message = "You're an adult"
+//}
+//    else{
+//        message = "You're a minor"
+//    }
+
+let Time = 16;
+let greeting = time < 12 ? "Good morning" : "Good evening";
+console.log(greeting);
+
+let isAStudent = true;
+let studentMessage = isAStudent ? "You are a student" : "You are NOT a student"
+console.log(studentMessage);
+
+let purchaseAmount = 125;
+let discount = purchaseAmount >= 100 ? 10 : 0;
+console.log(`Your total is $${purchaseAmount - purchaseAmount * (discount / 100)}`);
+
+// next script is ternary practice 
+
+let dad = true;
+let parentMessage = dad ? "You are a dad" : "You are not a dad";
+console.log(parentMessage);
+
+let mom = 50;
+let grandma = mom >= 49 ? "You are a grandma" : "You are not a grandma";
+console.log(grandma);
+
+let golfSwing = 100; 
+let driver = 10.5;
+let threeWood = 15; 
+let swingSpeed = golfSwing >= 100 ? driver : threeWood;
+console.log(`With your swing speed you should use a ${swingSpeed} degree lofted club`); 
+
+// next script is for Switches
+//switch = can be efficient replacement to many else if statements 
+
+let day = 5;
+
+switch(day){
+    case 1: 
+        console.log("It is Monday")
+        break;
+    case 2:
+        console.log("it is Tuesday")
+        break;
+    case 3: 
+        console.log("It is Wednesday")
+        break;
+    case 4: 
+    console.log("It is Thursday")
+        break;
+    case 5: 
+    console.log("It is Friday")
+        break;
+    case 6: 
+    console.log("It is Saturday")
+        break;
+    case 7: 
+        console.log("It is Sunday")
+        break;
+    default:
+        console.log(`${day} is not a day`)
+}
+
+let testScore = 92;
+let letterGrade;
+
+switch(true){
+    case testScore >= 90:
+        letterGrade = "A";
+        break;
+    case testScore >= 80:
+        letterGrade = "B";
+        break;
+    case testScore >= 70:
+        letterGrade = "C"
+        break;
+    case testScore >= 60:
+        letterGrade = "D"
+        break;
+    default:
+        letterGrade = "F";
+
+
+}
+
+console.log(letterGrade);
 
