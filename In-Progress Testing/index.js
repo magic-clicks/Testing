@@ -313,3 +313,43 @@ switch(true){
 
 console.log(letterGrade);
 
+// next script = string methods = allow you to manipulate and work with text (strings)
+
+let userName = "Magic Clicks"
+
+userName.charAt(0);
+console.log(userName.charAt(0));
+
+userName.indexOf("o");
+console.log(userName.indexOf("c"));
+
+userName = userName.toLocaleUpperCase();
+console.log(userName);
+
+userName = userName.toLocaleLowerCase();
+console.log(userName);
+
+userName = userName.repeat(3);
+console.log(userName);
+
+//this will read as a boolean
+
+//userName = userName.startsWith("  ");
+//console.log(userName);
+
+let result = userName.startsWith(" ");
+
+if(result){
+    console.log("Your name cannot start with empty space");
+}
+else{
+    console.log("Your name does not start with an empty space!");
+}
+
+let phoneNumber = "123-456-7890";
+
+phoneNumber = phoneNumber.replaceAll("-", "")
+console.log(phoneNumber);
+
+//padStart and padEnd will add the character of your choice so like 
+// phoneNumber.padEnd("15", "0") would add 0's at the end until it's 15 char long
