@@ -190,3 +190,25 @@ mySubmitBtn.onclick = function(){
    }
   
 }
+
+// Next script for practice doing resident result
+
+const yesResident = document.getElementById("yesResident");
+const noResident = document.getElementById("noResident");
+const residentSubmit = document.getElementById("residentSubmit");
+const residentResult = document.getElementById("residentResult");
+
+residentSubmit.onclick = function(){
+    if(yesResident.checked){
+        residentResult.textContent = "You are within the elgibile population.";
+    }
+    else if(noResident.checked){
+        residentResult.textContent = "You do not meet program requirements.";
+    }
+    else{
+        residentResult.textContent = "Please answer the question."
+    }
+}
+
+// Next script 
+
