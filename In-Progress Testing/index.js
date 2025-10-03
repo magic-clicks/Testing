@@ -210,6 +210,24 @@ residentSubmit.onclick = function(){
     }
 }
 
+const residentIncome = document.getElementById("residentIncome");
+const incomeSubmit = document.getElementById("incomeSubmit");
+const incomeResult = document.getElementById("incomeResult");
+
+incomeSubmit.onclick = function(){
+    income = residentIncome.value;
+    income = Number(income);
+    
+    if(income <= 2500){
+        incomeResult.textContent = "Your income is within the program limits!";
+    }
+    else if(income >= 2500){
+        incomeResult.textContent = "You are over the income requirements";
+    }
+    else{
+        incomeResult.textContent = "Please enter income"
+    }
+}
 // Next script ternary operator it's a shortcut to if and else statements
 //helps to assign a veriabled based on a condition
 
