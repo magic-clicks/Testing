@@ -371,3 +371,38 @@ console.log(phoneNumber);
 
 //padStart and padEnd will add the character of your choice so like 
 // phoneNumber.padEnd("15", "0") would add 0's at the end until it's 15 char long
+
+// Next script string slicing = creating a substring
+//                              from a portion of another string
+
+const fullName = "Magic Clicks";
+
+let firstName = fullName.slice(0,5);
+let lastName = fullName.slice(6);
+
+let firstChar = fullName.slice(0,1);
+let lastChar = fullName.slice(-1);
+
+console.log(firstName);
+console.log(lastName);
+console.log(firstChar);
+console.log(lastChar);
+
+// a better way to do this:
+
+let first_name = fullName.slice(0, fullName.indexOf(" "));
+let last_name = fullName.slice(fullName.indexOf(" ") +1);
+console.log(first_name);
+console.log(last_name);
+
+// excercise
+
+const email = "magicalclicks@gmail.com";
+
+let username = email.slice(0, email.indexOf("@"));
+let extension = email.slice(email.indexOf("@") +1);
+console.log(username);
+console.log(extension);
+
+// practice 
+
