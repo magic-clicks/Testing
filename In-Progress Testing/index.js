@@ -406,3 +406,6 @@ console.log(extension);
 
 // practice 
 
+const golfBall = "300 yards";
+let taylormade = golfBall.replaceAll("yards", "");
+console.log(taylormade);
