@@ -409,3 +409,24 @@ console.log(extension);
 const golfBall = "300 yards";
 let taylormade = golfBall.replaceAll("yards", "");
 console.log(taylormade);
+
+// method chaining = calling one method after another in one continious line of code
+
+// no method chaining 
+
+let name = window.prompt("Ente your username");
+
+name = name.trim();
+let letter = name.charAt(0);
+letter = letter.toLocaleUpperCase();
+
+let extraChars = name.slice(1);
+extraChars = extraChars.toLowerCase();
+
+name = letter + extraChars;
+console.log(name);
+
+// method chaining - combining steps and avoiding creating so many variables
+
+name = name.trim().charAt(0).toUpperCase() + name.trim().slice(1).toLowerCase();
+console.log(name);
