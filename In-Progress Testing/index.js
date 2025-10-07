@@ -430,3 +430,12 @@ console.log(name);
 
 name = name.trim().charAt(0).toUpperCase() + name.trim().slice(1).toLowerCase();
 console.log(name);
+
+//practice 
+
+let married = window.prompt("Are you married?");
+
+married = married.trim().toLowerCase();
+console.log(married);
+
+// 
