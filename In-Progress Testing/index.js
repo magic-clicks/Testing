@@ -206,7 +206,7 @@ residentSubmit.onclick = function(){
         residentResult.textContent = "You do not meet program requirements.";
     }
     else{
-        residentResult.textContent = "Please answer the question."
+        residentResult.textContent = "Please answer the question.";
     }
 }
 
@@ -225,9 +225,31 @@ incomeSubmit.onclick = function(){
         incomeResult.textContent = "You are over the income requirements";
     }
     else{
-        incomeResult.textContent = "Please enter income"
+        incomeResult.textContent = "Please enter income";
     }
 }
+
+// practice for US Citizen
+
+const yesCitzen = document.getElementById("yesCitzen");
+const noCitzen = document.getElementById("noCitzen");
+const citzenResult = document.getElementById("citzenResult");
+const citizenSubmit = document.getElementById("citizenSubmit");
+
+citizenSubmit.onclick = function(){
+    if(yesCitizen.checked){
+        citzenResult.textContent = "You are within the eligible population";
+    }
+    else if(noCitizen.checked){
+        citzenResult.textContent = "You do not meet program requirements";
+    }
+    else{
+        citzenResult.textContent = "Please make a seelection";
+    }
+
+}
+
+
 // Next script ternary operator it's a shortcut to if and else statements
 //helps to assign a veriabled based on a condition
 
@@ -414,7 +436,7 @@ console.log(taylormade);
 
 // no method chaining 
 
-let name = window.prompt("Ente your username");
+// let name = window.prompt("Ente your username"); THIS IS AN ALERT
 
 name = name.trim();
 let letter = name.charAt(0);
@@ -433,7 +455,7 @@ console.log(name);
 
 //practice 
 
-let married = window.prompt("Are you married?");
+//let married = window.prompt("Are you married?"); THIS IS AN ALERT
 
 married = married.trim().toLowerCase();
 console.log(married);
