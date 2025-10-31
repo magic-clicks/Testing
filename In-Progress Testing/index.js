@@ -480,7 +480,7 @@ console.log(name);
 
 // logical operators = used to combine or manipulate boolean values (true or fale)
 // and = &&
-// OR = 
+// OR = ||
 // NOT = !
 
 const temperature = 15;
@@ -500,6 +500,17 @@ if(!isSunny){
 else{
     console.log("It is Sunny!");
 }
+
+
+const eli = 7
+
+if(eli <10 || eli  >5 ){
+    console.log("Make sure Eli gets some food");
+}
+else{
+    console.log("Eli is well fed");
+}
+
 
 // = assignment operator
 // == comparison operation (compares if values are equal)
