@@ -511,6 +511,26 @@ else{
     console.log("Eli is well fed");
 }
 
+// testing to see if I can use this with a label, input, and subimt button to
+// generat reults on the webpage
+// Doing a scenario like above but gonna make someone submit ash's weight
+
+const ashWeight = document.getElementById("ashWeight");
+const ashSubmit = document.getElementById("ashSubmit");
+const ashResult = document.getElementById("ashResult");
+
+// need to finish this and convert to a number 
+ashSubmit.onclick = function(){
+if(ashWeight <10 || ashWeight >5 ){
+    ashResult.textContent = "Make sure Ash gets some food";
+}
+else if(ashWeight >10){
+    ashResult.textContent = "ash is well fed";
+}
+else{
+    ashResult.textContent = "Please enter ash's weight";
+}
+}
 
 // = assignment operator
 // == comparison operation (compares if values are equal)
