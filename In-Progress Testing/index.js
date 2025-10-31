@@ -249,6 +249,24 @@ citizenSubmit.onclick = function(){
 
 }
 
+// practice for caretaker
+
+const yesCaretaker = document.getElementById("yesCaretaker");
+const noCaretaker = document.getElementById("noCaretaker");
+const caretakerResult = document.getElementById("caretakerResult");
+const caretakerSubmit = document.getElementById("caretakerSubmit");
+
+caretakerSubmit.onclick = function(){
+    if(yesCaretaker.checked){
+        caretakerResult.textContent = `You clicked on "Yes"`;
+    }
+    else if(noCaretaker.checked){
+        caretakerResult.textContent = `You clicked on "No"`;
+    }
+    else{
+        caretakerResult.textContent = "Please make a selection"
+    }
+}
 
 // Next script ternary operator it's a shortcut to if and else statements
 //helps to assign a veriabled based on a condition
