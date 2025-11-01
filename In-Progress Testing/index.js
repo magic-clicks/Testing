@@ -521,10 +521,11 @@ const ashResult = document.getElementById("ashResult");
 
 // need to finish this and convert to a number 
 ashSubmit.onclick = function(){
-if(ashWeight <10 || ashWeight >5 ){
+    const weight = Number(ashWeight.value);
+if(weight > 10 || weight <= 7 ){
     ashResult.textContent = "Make sure Ash gets some food";
 }
-else if(ashWeight >10){
+else if(weight <= 10 ){
     ashResult.textContent = "ash is well fed";
 }
 else{
