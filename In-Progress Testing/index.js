@@ -559,7 +559,7 @@ while(UserName == ""){
 }
  console.log(`Hello ${UserName}`);
 
- let loggedIn = false;
+ let loggedIn = true; // change to false if you want to see this code in action, made true to avoid prompt
  let login;
  let pass;
 
@@ -576,4 +576,20 @@ while(UserName == ""){
     }
  }
 
- 
+
+// for loop = repeat some code a LIMITED amount of times
+//making three statements within the for() 
+
+for(let i = 0; i <= 2; i++){
+    console.log(i);
+}
+
+for(let i = 1; i<=20; i++ ){
+
+    if(i == 13){
+        break; // can do continue or break here 
+    }
+    else{
+        console.log(i);
+    }
+}
