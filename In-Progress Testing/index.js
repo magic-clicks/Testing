@@ -631,7 +631,6 @@ while(running == true){
         }
     }
     
-    running = false;
 }
 
 //console.log(answer);
