@@ -512,21 +512,26 @@ else{
 }
 
 // testing to see if I can use this with a label, input, and subimt button to
-// generat reults on the webpage
+// generate reults on the webpage
 // Doing a scenario like above but gonna make someone submit ash's weight
 
 const ashWeight = document.getElementById("ashWeight");
 const ashSubmit = document.getElementById("ashSubmit");
 const ashResult = document.getElementById("ashResult");
 
-// need to finish this and convert to a number 
+// in this scenario I converted a text value box into a number and tied it to if else statements 
+//and also using logical operators 
+
 ashSubmit.onclick = function(){
     const weight = Number(ashWeight.value);
-if(weight > 10 || weight <= 7 ){
+if(weight > 0 && weight <= 10 ){
     ashResult.textContent = "Make sure Ash gets some food";
 }
-else if(weight <= 10 ){
+else if(weight >= 10 && weight <= 15 ){
     ashResult.textContent = "ash is well fed";
+}
+else if(weight >= 15){
+    ashResult.textContent = "Oh my lord he's a chonker!"
 }
 else{
     ashResult.textContent = "Please enter ash's weight";
