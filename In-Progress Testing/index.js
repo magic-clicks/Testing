@@ -596,6 +596,10 @@ for(let i = 1; i<=20; i++ ){
 
 // Number guessing game
 
+//let me try and tie it to a game so it's not forcing to run everytime you open the page
+
+const guessingGame = document.getElementById("guessingGame");
+
 const minNum = 1;
 const maxNum = 100;
 const answer = Math.floor(Math.random() * (maxNum - minNum +1)) + minNum;
@@ -603,6 +607,8 @@ const answer = Math.floor(Math.random() * (maxNum - minNum +1)) + minNum;
 let attempts = 0;
 let guess;
 let running = true;
+
+guessingGame.onclick = function(){
 
 while(running == true){
 
@@ -632,5 +638,4 @@ while(running == true){
     }
     
 }
-
-//console.log(answer);
+}

@@ -62,3 +62,8 @@
     text-align: center;
     font-size: 25px;
 }
+#guessingGame{
+   padding: 20px;
+   width: 250px;
+   height: 100px;
+}
