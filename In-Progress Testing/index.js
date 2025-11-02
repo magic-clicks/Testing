@@ -706,3 +706,34 @@ function isValidEmail(email){ // this is a function that sees if the email is le
 }
 console.log(isValidEmail("Maigc@mail.com"));
 console.log(isValidEmail("fakemail.com"));
+
+// variable scope = when a variable is recognized and accesible (local vs gloabl)
+
+function function1(){
+    let x = 1;
+    console.log(x);
+}
+function function2(){
+    let x = 2;
+    console.log(x);
+}
+
+
+function1();
+function2();
+
+// you can redeclare variables inside functions because functions cannot see inside other functions
+// these are local scope
+// global sope is anything delcared outside a function - below shows how it pulls a global varible into the function
+// it's not reccomended to declare global functions inside programs
+
+let m = 55;
+
+function function3(){
+    console.log(m);
+}
+
+function3();
+
+//if there are two varibles that are the same like x =
+//it will always use the local one instead of the global one
