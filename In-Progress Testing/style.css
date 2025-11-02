@@ -100,3 +100,27 @@ label{
     font-size: 1.75em;
     font-weight: bold;
 }
+.flourConversion{
+    text-align: center;
+    padding: 20px;
+}
+#flower {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.5em;
+}
+#flowerButton {
+    padding: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: lightblue;
+}
+#flowerButton:hover {
+    background-color: lightskyblue;
+}
+#flowerResult {
+    font-size: 25px;
+}

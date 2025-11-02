@@ -762,3 +762,31 @@ function convert(){
         tempResult.textContent = "Select a unit";
     }
 }
+
+// practice doing a flour conversion for recipe website
+// flour: 30 grams is equal to 1/4 cup 
+// conversion here is grams to cups
+// 1 cup all purpose flower is 120 grams
+
+const flour = document.getElementById("flour");
+const gramsToCups = document.getElementById("gramsToCups");
+const cupsToGrams = document.getElementById("cupsToGrams");
+const flowerResult = document.getElementById("flowerResult");
+let flourConversion;
+
+function flourConvert(){
+
+    if(gramsToCups.checked){
+        flourConversion = Number(flour.value);
+        flourConversion = flourConversion / 120; 
+        flowerResult.textContent = flourConversion + " Cups"
+    }
+    else if(cupsToGrams.checked){
+        flourConversion = Number(flour.value);
+        flourConversion = flourConversion * 120;
+        flowerResult.textContent = flourConversion + " Grams"
+    }
+    else{
+        flowerResult.textContent = "Please select a unit";
+    }
+}
