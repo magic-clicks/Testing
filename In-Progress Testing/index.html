@@ -105,9 +105,26 @@
         <button type="submit" id="guessingGame">Play!</button>
         
     </div>
+
     <div class="">
 
     </div>
+
+    <form>
+        <h1>Temperature Conversion:</h1>
+        <input type="number" id="textBox" value="0">
+        <br>
+        <input type="radio" id="toFahrenheit" name="unit">
+        <label for="toFahrenheit">Celcius to Fahrenheit</label>
+        <br>
+        <input type="radio" id="toCelcius" name="unit">
+        <label for="toCelcius">Fahrenheit to Celcius</label>
+        <br>
+        <br>
+        <button id="tempButton" type="button" onclick="convert()">Submit</button>
+        <p id="tempResult"></p>
+    </form>
+
 <script src="index.js"></script>
 </body>
 </html>

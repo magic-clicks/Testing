@@ -737,3 +737,28 @@ function3();
 
 //if there are two varibles that are the same like x =
 //it will always use the local one instead of the global one
+
+//Temperature conversion program!
+
+const textBox = document.getElementById("textBox");
+const toFahrenheit = document.getElementById("toFahrenheit");
+const toCelcius = document.getElementById("toCelcius");
+const tempResult = document.getElementById("tempResult");
+let temp;
+
+function convert(){
+
+    if(toFahrenheit.checked){
+        temp = Number(textBox.value);
+        temp = temp * 9 / 5 + 32;
+        tempResult.textContent = temp.toFixed(1) + "°F"; // the tofixed gives 1 decimal point
+    }
+    else if(toCelcius.checked){
+        temp = Number(textBox.value);
+        temp = (temp - 32) * (5/9);
+        tempResult.textContent = temp.toFixed(1) + "°C";
+    }
+    else{
+        tempResult.textContent = "Select a unit";
+    }
+}
