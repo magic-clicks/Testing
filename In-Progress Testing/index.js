@@ -805,12 +805,12 @@ function sugarConversion(){
     if(sugarGramsToCups.checked){
         sugarConvert = Number(sugar.value);
         sugarConvert = sugarConvert / 198;
-        sugarResult.textContent = sugarConvert + " Cups";
+        sugarResult.textContent = sugarConvert.toFixed(4) + " Cups";
     }
     else if(sugarCupsToGrams.checked){
         sugarConvert = Number(sugar.value);
         sugarConvert =  sugarConvert * 198;
-        sugarResult.textContent = sugarConvert + " Grams";
+        sugarResult.textContent = sugarConvert.toFixed(4) + " Grams";
     }
     else{
         sugarResult.textContent = "Please select a unit"
