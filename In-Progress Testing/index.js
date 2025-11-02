@@ -645,3 +645,64 @@ guessingGame.onclick = function(){
     }
 }
 
+// function = a section of resuable code
+// declare code one, use it whenever you want
+// call the function to execute that code
+
+function happyBirthday(username, age){ // you can set parementers inside the parenthesis
+    console.log("Happy birthday to you!");
+    console.log("Happy birthday to you!");
+    console.log(`Happy birthday ${username} you!`);
+    console.log("Happy birthday to you!");
+    console.log(`you are ${age} years old`);
+}
+
+happyBirthday("Magic Clicks", 27); //here you put the arguments for the paremeters - the order does matter
+happyBirthday("Spongebob", 30);
+happyBirthday("Patrick", 37);
+
+function add(x, y){
+    let results = x + y;
+    return results;
+}
+let answers = add(2,3);
+console.log(answers);
+
+function subtract(x, y){ // this is another way to do above ^ the add function 
+    return x - y;
+
+}
+console.log(subtract(2, 3));
+
+function multiply(x, y){
+    return x * y;
+}
+console.log(multiply(2,3));
+
+function devide(x , y){
+    return x / y;
+}
+console.log(devide(2,3));
+
+function isEven(number){ // this would be a function to see if a number is even - true even - false odd
+    if(number % 2 === 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+console.log(isEven(14));
+
+function isValidEmail(email){ // this is a function that sees if the email is legit by checking the @ in the email
+
+    if(email.includes("@")){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+console.log(isValidEmail("Maigc@mail.com"));
+console.log(isValidEmail("fakemail.com"));
