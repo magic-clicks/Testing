@@ -779,14 +779,41 @@ function flourConvert(){
     if(gramsToCups.checked){
         flourConversion = Number(flour.value);
         flourConversion = flourConversion / 120; 
-        flowerResult.textContent = flourConversion + " Cups"
+        flowerResult.textContent = flourConversion + " Cups";
     }
     else if(cupsToGrams.checked){
         flourConversion = Number(flour.value);
         flourConversion = flourConversion * 120;
-        flowerResult.textContent = flourConversion + " Grams"
+        flowerResult.textContent = flourConversion + " Grams";
     }
     else{
         flowerResult.textContent = "Please select a unit";
     }
+}
+
+// Another practice function doing sugar conversion calculator
+// also doing grams to cup and then cups to grams
+
+const sugar = document.getElementById("sugar");
+const sugarCupsToGrams = document.getElementById("sugarCupsToGrams");
+const sugarGramsToCups = document.getElementById("sugarGramsToCups");
+const sugarResult = document.getElementById("sugarResult");
+let sugarConvert;
+
+function sugarConversion(){
+
+    if(sugarGramsToCups.checked){
+        sugarConvert = Number(sugar.value);
+        sugarConvert = sugarConvert / 198;
+        sugarResult.textContent = sugarConvert + " Cups";
+    }
+    else if(sugarCupsToGrams.checked){
+        sugarConvert = Number(sugar.value);
+        sugarConvert =  sugarConvert * 198;
+        sugarResult.textContent = sugarConvert + " Grams";
+    }
+    else{
+        sugarResult.textContent = "Please select a unit"
+    }
+
 }
