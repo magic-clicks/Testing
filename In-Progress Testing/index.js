@@ -861,6 +861,11 @@ function tipCalculator(){
     }
 }
 
+// more practice this time doing sales tax calculator 
+// making this one a seprate function no checked properties, and then making an onclick to call
+// the function I created
+
+
 const preTaxTotal = document.getElementById("preTaxTotal");
 const taxResult = document.getElementById("taxResult");
 const taxSubmit = document.getElementById("taxSubmit");
@@ -874,3 +879,4 @@ function taxCalculator(){
 }
 
 taxSubmit.onclick = taxCalculator;
+
