@@ -860,3 +860,17 @@ function tipCalculator(){
         percentResult.textContent = "Please select a percentage";
     }
 }
+
+const preTaxTotal = document.getElementById("preTaxTotal");
+const taxResult = document.getElementById("taxResult");
+const taxSubmit = document.getElementById("taxSubmit");
+let salesTax;
+
+
+function taxCalculator(){
+    salesTax = Number(preTaxTotal.value);
+    salesTax = salesTax * 0.0935 + salesTax;
+    taxResult.textContent =  "$" + salesTax + " Dollars";
+}
+
+taxSubmit.onclick = taxCalculator;
