@@ -910,3 +910,4 @@ console.log(index);
 
 fruits.sort();
 console.log(fruits);
+
