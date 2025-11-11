@@ -5,18 +5,20 @@
     box-sizing: border-box;
 }
 .header {
+    display: flex;
+    justify-content: center;
     text-align: center;
     padding: 25px;
     background-color: #1e448a;
     color: white;
     font-weight: bold;
-    
 }
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px;
+ 
 }
 .checkEligibility {
     display: flex;
@@ -28,7 +30,8 @@
     text-align: center;
     border: solid #ccc 1px;
     border-radius: 25px;
-    box-shadow: 10px 5px 5px #ccc;
+    box-shadow: 5px 5px 5px #ccc;
+
 }
 .checkEligibility h2 {
     color: #1e448a;
@@ -49,4 +52,14 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+    text-decoration: none;
+}
+.checkEligibility a:hover {
+    cursor: pointer;
+    background-color: #3d5c94;
+}
+.disclaimer {
+    text-align: center;
+    text-wrap: wrap;
+    font-size: 12px;
 }
