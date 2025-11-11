@@ -885,3 +885,28 @@ taxSubmit.onclick = taxCalculator;
 rsn = "Magic Clicks";
 console.log(`You are ${rsn}`);
 
+// array = a variable like structure that can hold more than 1 value
+
+let fruits = ["apple", "orange", "banana"];
+console.log(fruits);
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+
+fruits.push("coconut"); // this adds one to the end
+console.log(fruits);
+
+fruits.pop(); // this removes the last one
+console.log(fruits);
+
+fruits.unshift("mango"); // this adds one to the beggining
+console.log(fruits);
+
+let numOfFruits = fruits.length; // this is how you get an array length
+console.log(numOfFruits);
+
+let index = fruits.indexOf("apple"); // this lets you find the position of something in the array
+console.log(index);
+
+fruits.sort();
+console.log(fruits);
