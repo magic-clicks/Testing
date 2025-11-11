@@ -860,3 +860,9 @@ function tipCalculator(){
         percentResult.textContent = "Please select a percentage";
     }
 }
+
+// just testing something silly
+
+rsn = "Magic Clicks";
+console.log(`You are ${rsn}`);
+
