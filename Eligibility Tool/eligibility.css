@@ -3,9 +3,11 @@
     margin: 0;
     font-family: tahoma;
     box-sizing: border-box;
+
 }
 .header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     padding: 25px;
@@ -15,12 +17,15 @@
 }
 .container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 50px;
- 
+    gap: 25px;
+    
 }
 .checkEligibility {
+    flex: 1 1 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,28 +36,31 @@
     border: solid #ccc 1px;
     border-radius: 25px;
     box-shadow: 5px 5px 5px #ccc;
-
+    padding: 25px;
+    gap: 10px;
 }
 .checkEligibility h2 {
     color: #1e448a;
     font-size: 30px;
 }
 .checkEligibility img {
-    width: 498px;
-    height: 300px;
+    flex: 1 1 1;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     align-items: center;
+    
 }
 .checkEligibility a {
+    flex: 1 1 1;
     color: white;
     background-color: #1e448a;
-    width: 498px;
-    height: 50px;
-    display: flex;
+    max-width: 100%;
+    height: auto;
     align-items: center;
     text-align: center;
-    justify-content: center;
     text-decoration: none;
+    padding: 25px;
 }
 .checkEligibility a:hover {
     cursor: pointer;
