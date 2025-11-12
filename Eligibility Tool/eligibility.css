@@ -31,7 +31,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 500px;
-    height: 500px;
+    height: 600px;
     text-align: center;
     border: solid #ccc 1px;
     border-radius: 25px;
@@ -70,4 +70,5 @@
     text-align: center;
     text-wrap: wrap;
     font-size: 12px;
+    max-width: 100%;
 }
