@@ -18,57 +18,66 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    padding: 50px;
-    gap: 25px;
-    
+    padding: 25px;
 }
 .checkEligibility {
     flex: 1 1 1;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
-    width: 500px;
-    height: 600px;
     text-align: center;
     border: solid #ccc 1px;
     border-radius: 25px;
     box-shadow: 5px 5px 5px #ccc;
     padding: 25px;
     gap: 10px;
+    height: 600px;
+    width: 600px;
 }
-.checkEligibility h2 {
+.eligibilityHeader {
+    flex: 1 1 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.eligibilityHeader h2 {
     color: #1e448a;
     font-size: 30px;
 }
-.checkEligibility img {
+.elibilityImage {
     flex: 1 1 1;
+}
+.elibilityImage img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     align-items: center;
     
 }
-.checkEligibility a {
+.eligibilityLink {
     flex: 1 1 1;
-    color: white;
+    padding: 25px;
     background-color: #1e448a;
     max-width: 100%;
     height: auto;
     align-items: center;
     text-align: center;
-    text-decoration: none;
-    padding: 25px;
 }
-.checkEligibility a:hover {
+.eligibilityLink a {
+    color: white;
+    text-decoration: none;
+}
+.eligibilityLink:hover {
     cursor: pointer;
     background-color: #3d5c94;
 }
 .disclaimer {
     text-align: center;
     text-wrap: wrap;
-    font-size: 12px;
+    font-size: 15px;
     max-width: 100%;
 }
