@@ -60,18 +60,24 @@
 }
 .eligibilityLink {
     flex: 1 1 1;
-    padding: 25px;
     background-color: #1e448a;
     max-width: 100%;
     height: auto;
     align-items: center;
     text-align: center;
+    
 }
 .eligibilityLink a {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
     color: white;
     text-decoration: none;
+    padding: 25px;
+    
 }
-.eligibilityLink:hover {
+.eligibilityLink a:hover {
     cursor: pointer;
     background-color: #3d5c94;
 }
@@ -79,5 +85,4 @@
     text-align: center;
     text-wrap: wrap;
     font-size: 15px;
-    max-width: 100%;
 }
