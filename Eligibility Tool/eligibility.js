@@ -20,7 +20,19 @@ const toolResult = document.getElementById("toolResult");
 
 function eligibility(){
 
-    if(yesResident.checked){
+let eligible = true;
+
+if (yesResident.checked) eligible = true;
+if (yesCit.checked) eligible = true;
+if (yesCTM.checked) eligible = true;
+if (yesMinor.checked) eligible = true;
+if (yesPregnant.checked) eligible = true;
+if (yesBCC.checked) eligible = true;
+if (yesFoster.checked) eligible = true;
+if (noCit.checked) eligible = false;
+if (noResident.checked) eligible = false;
+
+    if(eligible){
         toolResult.textContent = "You are within the eligible population!";
     }
     else{
