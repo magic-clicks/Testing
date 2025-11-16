@@ -21,10 +21,10 @@
                 <br>
                 <p>Are you a resident of the state?</p>
                 <br>
-                <label>Yes</label>
-                <input type="radio">
-                <label>No</label>
-                <input type="radio">
+                <label for="yesResident">Yes</label>
+                <input type="radio" id="yesResident" name="residency">
+                <label for="noResident">No</label>
+                <input type="radio" id="noResident" name="residency">
                 <br>
                 <br>
                 <p>Are you a US Citizen or Eligible Non-Citizen?</p>
@@ -78,6 +78,10 @@
             </div>
             <div class="submit">
                 <button type="button" onclick="eligibility()" class="toolSubmit">Submit</button>
+            </div>
+            <br>
+            <div>
+                <p id="toolResult">Click "Submit" to get the results!</p>
             </div>
         </div>
 
