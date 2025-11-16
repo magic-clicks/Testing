@@ -41,6 +41,12 @@ if (noResident.checked) eligible = false;
 
 }
 
+//document.getElementById("toolSubmit").onclick = function(){
+//    eligibility;
+//}
+
 // writing thoughts down - what if I write up each checked property as its own function
 // and then I write the submit button to run each funtion in succession as long as they keep passing
 // that might be the most legit way to do it
+
+// decided to try and write it differently that mentioned above using booleans
