@@ -11,6 +11,6 @@ toggleButton.addEventListener(`click`, function(){
         toggleButton.textContent = `Switch to Light Mode`;
     }
     else{
-        toggle.button.textContent - `Switch to Dark Mode`;
+        toggleButton.textContent = `Switch to Dark Mode`;
     }
 })

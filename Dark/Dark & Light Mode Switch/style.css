@@ -8,7 +8,7 @@ body {
     background-color: lightgray;
     color: black;
     padding: 20px;
-    transition: background-color 0.3s, color 0.3s; /* Smooths transition*/
+    transition: background-color .3s, color .3s; /* Smooths transition*/
 }
 
 .dark-mode {
