@@ -1022,3 +1022,4 @@ function combineString(...stringz){
 const realName = combineString("Mr", "Spongebob", "Squarepants", "III");
 
 console.log(realName);
+
