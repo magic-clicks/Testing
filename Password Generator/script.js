@@ -1,6 +1,7 @@
 // random password generator
 
 
+
 function generatePassword(length, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols){
 
     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
@@ -23,21 +24,27 @@ function generatePassword(length, includeLowerCase, includeUpperCase, includeNum
         return `(at least 1 set of characters need to be selected)`;
     }
 
-    for(let i =0; i < length; i++){
+    for(let i = 0; i < length; i++){
         const randomIndex = Math.floor(Math.random() * allowedChars.length);
         password += allowedChars[randomIndex];
     }
     
-    return password;
-}
+    passwordResult.textContent = `Generated password: ${password}`
 
+    return password;
+
+}
 
 const passwordLength = 12;
 const includeLowerCase = true;
 const includeUpperCase = true;
 const includeNumbers = true;
 const includeSymbols = true;
+const passwordResult = document.getElementById("passwordResult");
+const passwordButton = document.getElementById("passwordButton");
+
 
 const password = generatePassword(passwordLength, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols);
 
 console.log(`Generated password ${password}`);
+
