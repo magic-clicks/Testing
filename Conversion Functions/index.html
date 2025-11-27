@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <form>
+        <h1>Temperature Conversion:</h1>
+        <input type="number" id="textBox" value="0">
+        <br>
+        <input type="radio" id="toFahrenheit" name="unit">
+        <label for="toFahrenheit">Celcius to Fahrenheit</label>
+        <br>
+        <input type="radio" id="toCelcius" name="unit">
+        <label for="toCelcius">Fahrenheit to Celcius</label>
+        <br>
+        <br>
+        <button id="tempButton" type="button" onclick="convert()">Submit</button>
+        <p id="tempResult"></p>
+    </form>
+
+    <div class="flourConversion">
+        <h1>Flour Conversion</h1>
+        <input type="number" id="flour" value="0">
+        <br>
+        <br>
+        <input type="radio" id="gramsToCups" name="conversion">
+        <label for="gramsToCups">Grams to Cups</label>
+        <br>
+        <input type="radio" id="cupsToGrams" name="conversion">
+        <label for="cupsToGrams">Cups to Grams</label>
+        <br>
+        <br>
+        <button id="flowerButton" type="button" onclick="flourConvert()">Submit</button>
+        <p id="flowerResult"></p>
+        <p>Note: This conversion is for all purpose flower</p>
+    </div>
+
+    <div class="sugarConversion">
+        <h1>Sugar Conversion</h1>
+        <input type="number" id="sugar" value="0">
+        <br>
+        <br>
+        <input type="radio" id="sugarGramsToCups" name="sugarUnit">
+        <label for="sugarGramsToCups">Grams to Cups</label>
+        <br>
+        <input type="radio" id="sugarCupsToGrams" name="sugarUnit">
+        <label for="sugarCupsToGrams">Cups to Grams</label>
+        <br>
+        <br>
+        <button id="sugarButton" type="button" onclick="sugarConversion()">Submit</button> 
+        <p id="sugarResult"></p>
+        <p>Note: This conversion is for granualted sugar</p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

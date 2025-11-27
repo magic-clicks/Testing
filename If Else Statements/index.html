@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="ifStatements">
+        <label>Enter your age:</label>
+        <br>
+        <input type="text" id="ageBox">
+        <br>
+        <button type="submit" id="ageSubmit">Submit</button>
+        <p id="resultElement"></p>
+    </div>
+    <br>
+    <div class="checkedProperty">
+        <input type="checkbox" id="myCheckBox">
+        <label for="myCheckBox">Subscribe</label>
+        <br>
+        <input type="radio" id="visaBtn" name="card">
+        <label for="visaBtn">Visa</label>
+        <br>
+        <input type="radio" id="masterCardBtn" name="card">
+        <label for="masterCardBtn">MasterCard</label>
+        <br>
+        <input type="radio" id="payPalBtn" name="card">
+        <label for="payPalBtn">PayPal</label>
+        <br>
+        <br>
+        <button type="submit" id="mySubmitBtn">Submit</button>
+        <p id="subResult"></p>
+        <p id="paymentResult"></p>
+    </div>
+    <br>
+    <br>
+    <div class="checkedPropertyPractice">
+        <h3>Are you a resident of the state?</h3>
+        <label for="yesResident">Yes</label>
+        <input type="radio" id="yesResident" name="question">
+        <label for="noResident">No</label>
+        <input type="radio" id="noResident" name="question">
+        <button type="submit" id="residentSubmit">Submit</button>
+        <p id="residentResult"></p>
+       
+        <h3>What is your income?</h3>
+        <label for="income">Income:</label>
+        <input type="text" id="residentIncome" name="income">
+        <button type="submit" id="incomeSubmit">Submit</button>
+        <p id="incomeResult"></p>
+        
+        <h3>Are you a US Citiezn?</h3>
+        <label for="yesCitizen">Yes</label>
+        <input type="radio" id="yesCitizen" name="citizen">
+        <label for="noCitzen">No</label>
+        <input type="radio" id="noCitizen" name="citizen">
+        <button type="submit" id="citizenSubmit">Submit</button>
+        <p id="citzenResult"></p>
+
+        <h3>Are you a caretaker?</h3>
+        <label for="yesCaretaker">Yes</label>
+        <input type="radio" id="yesCaretaker" name="ctm" required>
+        <label for="noCaretaker">No</label>
+        <input type="radio" id="noCaretaker" name="ctm" required>
+        <button type="submit" id="caretakerSubmit">Submit</button>
+        <p id="caretakerResult"></p>
+
+        <h3>Do you need to feed Ash?</h3>
+        <label for="ashWeight">What is Ash's weight?</label>
+        <input type="text" id="ashWeight" name="weight">
+        <button type="submit" id="ashSubmit">Submit</button>
+        <p id="ashResult"></p>
+
+        
+        
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
