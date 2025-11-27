@@ -1051,14 +1051,7 @@ function goodbye(){
     console.log("Goodbye!");
 }
 
-// next example
+// foreach() = method used to iterate over the elements of an array
+// and apply a specified function (callback)
+// to each element
 
-//sum(displayConsole, 1, 2);
-
-//function sum(callback, x, y){
-//    let result = x + y;
-//    callback(result);
-//}
-//function displayConsole(result){
-//    console.log(result);
-//}
