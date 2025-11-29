@@ -115,3 +115,47 @@ console.log(person.lastName);
 console.log(person.age);
 
 console.log(person.fullName);
+
+// reinforcing knowledge with new exmaple
+
+class golfClubs{
+    
+    constructor(type, loft){
+        this.type = type;
+        this.loft = loft;
+    }
+
+    set type(newType){
+        if(typeof newType === "string"){
+            this._type = newType;
+        }
+        else{
+            console.log("What type of golf Club is this")
+        }
+    }
+
+    set loft(newLoft){
+        if(newLoft > 0){
+            this._loft = newLoft;
+
+        }
+        else{
+            console.log("This must be a putter if it has less than 0 loft")
+        }
+    }
+
+
+    get type(){
+        return this._type;
+    }
+
+    get loft(){
+        return this._loft;
+    }
+    
+
+}
+
+const driver = new golfClubs("driver", 10.5);
+
+console.log(driver.loft);
