@@ -4,7 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compound Interest Calculator</title>
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    }
+
+    body {
+        background-color: darkgray;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 300px;
+        gap: 10px;
+        border: solid black 2px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px black;
+        font-size: 25px;
+    }
+    button {
+        padding: 5px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    </style>
 </head>
 <body>
     <h1>Interest Calculator</h1>
@@ -23,6 +58,40 @@
         <p id="total">Total: <span id="total-amount">$0.00</span></p>
     </form>
     
-    <script src="./script.js"></script>
+    <script>
+    console.log("test");
+
+    // Compound interest calculator
+
+    function calculate(){
+
+    const totalAmount = document.getElementById("total-amount");
+    const principalInput = document.getElementById("principal");
+    const rateInput = document.getElementById("rate");
+    const yearsInput = document.getElementById("years");
+
+    let principal = Number(principalInput.value);
+    let rate = Number(rateInput.value / 100);
+    let years = Number(yearsInput.value);
+
+    if(principal < 0 || isNaN(principal)){
+        principal = 0;
+        principalInput.value = 0;
+    }
+    if(rate < 0 || isNaN(rate)){
+        rate = 0;
+        rateInput.value = 0;
+    }
+    if(years < 0 || isNaN(years)){
+        years = 0;
+        yearsInput.value = 0;
+    }
+
+    const result = principal * Math.pow((1 + rate / 1), 1 * years)
+
+    totalAmount.textContent = result.toLocaleString(undefined, {style: "currency", currency: "USD"});
+
+    }
+    </script>
 </body>
 </html>

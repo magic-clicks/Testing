@@ -4,7 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stop Watch</title>
-    <link rel="stylesheet" href="./style.css">
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: grey;
+    }
+    #myH1 {
+        font-size: 50px;
+
+    }
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid black 2px;
+        border-radius: 10px;
+        padding: 30px;
+        background-color: white;
+    }
+    #display {
+        font-size: 60px;
+        font-family: monospace;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75);
+        margin-bottom: 25px;
+    }
+    #controls button {
+        font-size: 25px;
+        font-weight: bold;
+        padding: 10px 20px;
+        margin: 5px;
+        min-width: 125px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        color: white;
+        transition: background-color 0.5s ease;
+    }
+    #startBtn {
+        background-color: green;
+    }
+    #startBtn:hover {
+        background-color: rgba(0, 128, 0, 0.75);
+    }
+    #stopBtn {
+        background-color: red;
+    }
+    #stopBtn:hover {
+        background-color: rgba(255, 0, 0, 0.75);
+    }
+    #resetBtn {
+        background-color: blue;
+    }
+    #resetBtn:hover {
+        background-color: rgba(0, 0, 255, 0.75);
+    }
+
+    </style>
 </head>
 <body>
     <h1 id="myH1">Stopwatch</h1>
@@ -21,6 +86,61 @@
 
     </div>
 
-    <script src="./script.js"></script>
+    <script>
+    const display = document.getElementById("display");
+    let timer = null;
+    let startTime = 0;
+    let elapsedTime = 0;
+    let isrunning = false;
+
+    function start(){
+
+        if(!isrunning){
+            startTime = Date.now() - elapsedTime;
+            timer = setInterval(update, 10);
+            isrunning = true;
+        }
+
+    }
+
+    function stop(){
+
+        if(isrunning){
+            clearInterval(timer);
+            elapsedTime = Date.now() - startTime;
+            isrunning = false;
+        }
+
+    }
+
+    function reset(){
+        clearInterval(timer);
+        startTime = 0;
+        elapsedTime = 0;
+        isrunning = false;
+        display.textContent = "00:00:00:00";
+
+    }
+
+    function update(){
+
+        const currentTime = Date.now();
+        elapsedTime = currentTime - startTime;
+
+        let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+        let minutes = Math.floor(elapsedTime / (1000 * 60 ) % 60);
+        let seconds = Math.floor(elapsedTime / 1000 % 60);
+        let milliseconds = Math.floor(elapsedTime % 1000 / 10);
+
+        hours = String(hours).padStart(2, "0");
+        minutes = String(minutes).padStart(2, "0");
+        seconds = String(seconds).padStart(2, "0");
+        milliseconds = String(milliseconds).padStart(2, "0");
+
+        
+        display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`;
+
+    }
+    </script>
 </body>
 </html>
