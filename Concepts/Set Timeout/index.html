@@ -10,6 +10,51 @@
     <button onclick="startTimer()">START</button>
     <br>
     <button onclick="clearTimer()">CLEAR</button>
-    <script src="./script.js"></script>
+
+<script>
+    // set timeout() = function that allows you to schedule
+// the execution of a function after an amount of time (Milliseconds)
+// times are approximate (varies based on the workload of the JavaScript runetime env.)
+
+// setTimeout(callback, delay);
+
+function sayHello(){
+    window.alert("Hello");
+
+}
+
+setTimeout(sayHello, 3000);
+
+// can also do anon functions like this:
+
+setTimeout(function(){
+    console.log("5 Seconds");
+}, 5000);
+
+// can also do arrow functions 
+
+
+const timeoutID = setTimeout(() => console.log("7 Seconds"), 7000);
+
+clearTimeout(timeoutID); // cancels the timeout
+
+
+// for button example
+
+let timeOutID;
+
+function startTimer(){
+    timeOutID = setTimeout(() => window.alert("You clicked the button!"), 1000);
+    console.log("started");
+
+}
+
+function clearTimer(){
+    clearTimeout(timeOutID);
+    console.log("cleared");
+}
+
+
+</script>
 </body>
 </html>

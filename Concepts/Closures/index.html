@@ -8,6 +8,90 @@
 <body>
     
 
-    <script src="./script.js"></script>
+<script>
+    // closure = a function defined inside of another function, 
+// the inner function has access to the variables
+// and scope of the outer function. 
+// allow for private variables and state matenance
+// used frequestnly is frameworks: React, Vue, Angular
+
+function outer(){
+
+    let message = "hello"
+
+    function inner(){
+        console.log(message);
+    }
+
+    inner(); // function is defined within a function, have to call it here for it to work outside though
+    // everything inside has accesss to eachother
+}
+
+outer();
+
+message = "Goodbye"; // this in a different scope then above
+
+// example 2
+
+function createCounter(){
+
+
+    let count = 0
+
+    function incremenet(){
+    
+        count++;
+        console.log(`Count increased to ${count}`);
+}
+
+    function getCount(){
+        return count;
+    }
+
+return {incremenet, getCount};
+}
+
+
+const counter = createCounter();
+
+counter.incremenet();
+counter.incremenet();
+counter.incremenet();
+counter.incremenet();
+
+console.log(`The current count is ${counter.getCount()}`);
+
+// example 3
+
+function createGame(){
+
+    let score = 0;
+
+function increaseScore(points){
+    score += points;
+    console.log(`+${points}pts`);
+}
+
+function decreaseScore(points){
+    score -= points;
+    console.log(`-${points}pts`);
+}
+
+function getScore(){
+    return score;
+}
+
+return{increaseScore, decreaseScore, getScore};
+
+}
+
+const game = createGame();
+
+
+game.increaseScore(5);
+game.decreaseScore(3);
+console.log(`the final score is ${game.getScore()} pts`);
+
+</script>
 </body>
 </html>

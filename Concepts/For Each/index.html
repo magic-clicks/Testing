@@ -9,6 +9,95 @@
 <body>    
     
     
-<script src="index.js"></script>
+<script>
+    // forEach() = a method used to iterate (loop through) over the elements
+// of an array and apply a specified function (callback)
+// to each elemet
+
+// array.forEach(callback)
+//for element, index, array are provided
+
+
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(triple);
+numbers.forEach(double);
+numbers.forEach(display);
+
+
+function double(element, index, array){
+    array[index] = element * 2;
+}
+
+function triple(element, index, array){
+    array[index] = element * 3;
+}
+
+function square(element, index, array){
+    array[index] = Math.pow(element, 2);
+}
+
+function display(element){
+    console.log(element);
+}
+
+// practical example
+
+let fruits = ["apple", "orange", "banana", "cocounut"];
+
+fruits.forEach(capitalize);
+//fruits.forEach(upperCase);
+fruits.forEach(displays);
+
+function displays(element){
+    console.log(element);
+}
+
+function upperCase(element, index, array){
+    array[index] = element.toUpperCase();
+}
+
+function lowerCase(element, index, array){
+    array[index] = element.toLowerCase();
+}
+
+function capitalize(element, index, array){
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+}
+
+
+//Step-by-step: on how this works, it looks at the element a, index, then array. Example:
+
+//Iteration 1:
+
+//element = "a"
+
+//index = 0
+
+//array = letters
+
+//It runs:
+//letters[0] = "a".toUpperCase()
+//→ "A"
+
+//Iteration 2:
+
+//element = "b"
+
+//index = 1
+
+//letters[1] = "B"
+
+//Iteration 3:
+
+//element = "c"
+
+//index = 2
+
+//letters[2] = "C"
+
+
+
+</script>
 </body>
 </html>

@@ -8,6 +8,114 @@
 <body>
     
 
-    <script src="./script.js"></script>
+<script>
+    // next script = string methods = allow you to manipulate and work with text (strings)
+
+let userName = "Magic Clicks"
+
+userName.charAt(0);
+console.log(userName.charAt(0));
+
+userName.indexOf("o");
+console.log(userName.indexOf("c"));
+
+userName = userName.toLocaleUpperCase();
+console.log(userName);
+
+userName = userName.toLocaleLowerCase();
+console.log(userName);
+
+userName = userName.repeat(3);
+console.log(userName);
+
+//this will read as a boolean
+
+//userName = userName.startsWith("  ");
+//console.log(userName);
+
+let result = userName.startsWith(" ");
+
+if(result){
+    console.log("Your name cannot start with empty space");
+}
+else{
+    console.log("Your name does not start with an empty space!");
+}
+
+let phoneNumber = "123-456-7890";
+
+phoneNumber = phoneNumber.replaceAll("-", "")
+console.log(phoneNumber);
+
+//padStart and padEnd will add the character of your choice so like 
+// phoneNumber.padEnd("15", "0") would add 0's at the end until it's 15 char long
+
+// Next script string slicing = creating a substring
+//                              from a portion of another string
+
+const fullName = "Magic Clicks";
+
+let firstName = fullName.slice(0,5);
+let lastName = fullName.slice(6);
+
+let firstChar = fullName.slice(0,1);
+let lastChar = fullName.slice(-1);
+
+console.log(firstName);
+console.log(lastName);
+console.log(firstChar);
+console.log(lastChar);
+
+// a better way to do this:
+
+let first_name = fullName.slice(0, fullName.indexOf(" "));
+let last_name = fullName.slice(fullName.indexOf(" ") +1);
+console.log(first_name);
+console.log(last_name);
+
+// excercise
+
+const email = "magicalclicks@gmail.com";
+
+let username = email.slice(0, email.indexOf("@"));
+let extension = email.slice(email.indexOf("@") +1);
+console.log(username);
+console.log(extension);
+
+// practice 
+
+const golfBall = "300 yards";
+let taylormade = golfBall.replaceAll("yards", "");
+console.log(taylormade);
+
+// method chaining = calling one method after another in one continious line of code
+
+// no method chaining 
+
+// let name = window.prompt("Ente your username"); THIS IS AN ALERT
+
+name = name.trim();
+let letter = name.charAt(0);
+letter = letter.toLocaleUpperCase();
+
+let extraChars = name.slice(1);
+extraChars = extraChars.toLowerCase();
+
+name = letter + extraChars;
+console.log(name);
+
+// method chaining - combining steps and avoiding creating so many variables
+
+name = name.trim().charAt(0).toUpperCase() + name.trim().slice(1).toLowerCase();
+console.log(name);
+
+//practice 
+
+//let married = window.prompt("Are you married?"); THIS IS AN ALERT
+
+//married = married.trim().toLowerCase();
+//console.log(married);
+
+</script>
 </body>
 </html>
