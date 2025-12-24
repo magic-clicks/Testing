@@ -50,21 +50,36 @@ function change() {
 
 crazyButton.addEventListener("click", function(){
 
-  if(crazyButton.textContent === "Click Me"){
+  if(crazyButton.textContent === "Click Me Again"){
     crazyButton.textContent = "Click Him <--";
   }
   else if(crazyButton.textContent === "Click Him <--"){
     crazyButton.textContent = "Click Him -->";
   }
   else{
-    crazyButton.textContent = "Click Me";
+    crazyButton.textContent = "Click Me Again";
   }
 
 })
 
 const sillyButton = document.getElementById("sillyButton");
 
+buttonMoves = [
+  
+  sillyButton.style.transform = `translate(${1000, 300}px)`,
+  sillyButton.style.transform = `translate(${-100, 18}px)`,
+  sillyButton.style.transform = `translate(${35, 43}px)`,
+  sillyButton.style.transform = `translate(${-43, 100}px)`,
+
+]
+
 sillyButton.addEventListener("mouseover", function(){
   sillyButton.textContent = "Gotta be quicker than that!";
 })
+
+sillyButton.addEventListener("click", function(){
+  sillyButton.textContent = "But how fast can you click?";
+  const moveButton = Math.floor(Math.random() * buttonMoves.length);
+  sillyButton.style.transform = buttonMoves[moveButton];
+} )
 
