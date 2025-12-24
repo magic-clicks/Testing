@@ -9,9 +9,10 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    gap: 50px;
 }
 
-#myButton {
+#myButton, #crazyButton, #sillyButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,11 +23,11 @@ body {
     cursor: pointer;
 }
 
-#myButton:hover {
+#myButton:hover, #crazyButton:hover, #sillyButton:hover {
     background-color: lightskyblue;
 }
 
 
-#myButton:active {
+#myButton:active, #crazyButton:active, #sillyButton:active {
     background-color: lightgreen;
 }
