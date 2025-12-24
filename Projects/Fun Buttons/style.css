@@ -12,7 +12,7 @@ body {
     gap: 50px;
 }
 
-#myButton, #crazyButton, #sillyButton {
+#myButton, #crazyButton, #sillyButton, #backgroundColor {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,11 +23,11 @@ body {
     cursor: pointer;
 }
 
-#myButton:hover, #crazyButton:hover, #sillyButton:hover {
+#myButton:hover, #crazyButton:hover, #sillyButton:hover, #backgroundColor:hover {
     background-color: lightskyblue;
 }
 
 
-#myButton:active, #crazyButton:active, #sillyButton:active {
+#myButton:active, #crazyButton:active, #sillyButton:active, #backgroundColor:active {
     background-color: lightgreen;
 }

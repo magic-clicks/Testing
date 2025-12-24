@@ -83,3 +83,26 @@ sillyButton.addEventListener("click", function(){
   sillyButton.style.transform = buttonMoves[moveButton];
 } )
 
+const backroundButton = document.getElementById("backgroundColor");
+
+colors = [
+  "black",
+  "red",
+  "blue",
+  "green",
+  "purple",
+  "aquamarine",
+  "gray",
+  "yellow",
+  "orange",
+  "lightblue",
+  "skyblue",
+  "white",
+  "brown",
+  "pink",
+]
+
+backroundButton.addEventListener("click", function(){
+  const colorChange = Math.floor(Math.random() * colors.length);
+  document.body.style.backgroundColor = colors[colorChange];
+})
