@@ -66,11 +66,11 @@ const sillyButton = document.getElementById("sillyButton");
 
 buttonMoves = [
   
-  sillyButton.style.transform = `translate(${1000, 300}px)`,
-  sillyButton.style.transform = `translate(${-100, 18}px)`,
-  sillyButton.style.transform = `translate(${35, 43}px)`,
-  sillyButton.style.transform = `translate(${-43, 100}px)`,
-
+  "translate(300px, 300px)",
+  "translate(-300px, -300px)",
+  "translate(-300px, 300px)",
+  "translate(300px, -300px)",
+  
 ]
 
 sillyButton.addEventListener("mouseover", function(){
