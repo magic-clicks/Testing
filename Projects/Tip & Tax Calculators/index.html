@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tax & Tip Calculators</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            height: 100vh;
+            align-items: center;
+        }
+        .tipCalculator, .taxCalculator {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border: solid black 2px;
+            padding: 20px;
+            gap: 10px;
+            align-items: center;
+            text-align: center;
+            text-wrap: wrap;
+            width: 300px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px;
+        }   
+
+    </style>
 </head>
 <body>
     
@@ -11,21 +41,14 @@
         <h1>Tip Calculator</h1>
         <h3>Bill total</h3>
         <input type="number" id="tip" value="0">
-        <br>
-        <br>
         <input type="radio" id="tenPercent" name="tipUnit">
         <label for="tenPercent">10 Percent</label>
-        <br>
         <input type="radio" id="fifteenPercent" name="tipUnit">
         <label for="fifteenPercent">15 Percent</label>
-        <br>
         <input type="radio" id="twentyPercent" name="tipUnit">
         <label for="twentyPercent">20 Percent</label>
-        <br>
         <input type="radio" id="twentyFivePercent" name="tipUnit">
         <label for="twentyFivePercent">25 Percent</label>
-        <br>
-        <br>
         <button type="button" onclick="tipCalculator()">Submit</button>
         <p id="percentResult"></p>
 
@@ -35,8 +58,6 @@
         <p>Calculate the total amount of your purchase including the state, city, and county sales tax.</p>
         <h3>Amount</h3>
         <input type="number" id="preTaxTotal" name="taxUnit">
-        <br>
-        <br>
         <button type="submit" id="taxSubmit">Submit</button>
         <p id="taxResult"></p>
     </div>

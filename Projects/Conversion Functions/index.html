@@ -3,20 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Conversions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 25px;  
+            gap: 25px;
+            height: 100vh;
+        }
+        .tempConversion, .flourConversion, .sugarConversion {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: solid black 2px;
+            border-radius: 10px;
+            padding: 10px;
+            gap: 5px;
+            box-shadow: 10px 10px 10px;
+        }
+        #tempButton, #flowerButton, #sugarButton {
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
-      <form>
-        <h1>Temperature Conversion:</h1>
+      <form class="tempConversion">
+        <h1>Temperature Conversion</h1>
         <input type="number" id="textBox" value="0">
-        <br>
         <input type="radio" id="toFahrenheit" name="unit">
         <label for="toFahrenheit">Celcius to Fahrenheit</label>
-        <br>
         <input type="radio" id="toCelcius" name="unit">
         <label for="toCelcius">Fahrenheit to Celcius</label>
-        <br>
-        <br>
         <button id="tempButton" type="button" onclick="convert()">Submit</button>
         <p id="tempResult"></p>
     </form>
@@ -24,15 +54,10 @@
     <div class="flourConversion">
         <h1>Flour Conversion</h1>
         <input type="number" id="flour" value="0">
-        <br>
-        <br>
         <input type="radio" id="gramsToCups" name="conversion">
         <label for="gramsToCups">Grams to Cups</label>
-        <br>
         <input type="radio" id="cupsToGrams" name="conversion">
         <label for="cupsToGrams">Cups to Grams</label>
-        <br>
-        <br>
         <button id="flowerButton" type="button" onclick="flourConvert()">Submit</button>
         <p id="flowerResult"></p>
         <p>Note: This conversion is for all purpose flower</p>
@@ -41,15 +66,10 @@
     <div class="sugarConversion">
         <h1>Sugar Conversion</h1>
         <input type="number" id="sugar" value="0">
-        <br>
-        <br>
         <input type="radio" id="sugarGramsToCups" name="sugarUnit">
         <label for="sugarGramsToCups">Grams to Cups</label>
-        <br>
         <input type="radio" id="sugarCupsToGrams" name="sugarUnit">
         <label for="sugarCupsToGrams">Cups to Grams</label>
-        <br>
-        <br>
         <button id="sugarButton" type="button" onclick="sugarConversion()">Submit</button> 
         <p id="sugarResult"></p>
         <p>Note: This conversion is for granualted sugar</p>

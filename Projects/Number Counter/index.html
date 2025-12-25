@@ -3,7 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Number Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .numberCounter {
+           text-align: center; 
+           padding: 10px;
+           border-radius: 5px;
+        }
+        #btnContainer {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 5px;
+            padding: 10px;
+            
+        }
+    </style>
 </head>
 <body>
     <div class="numberCounter">
@@ -17,7 +42,8 @@
     </div>
     
     <script>
-        // Next Script for number counter
+    // Next Script for number counter
+    // very basic
 
     const decreaseBtn = document.getElementById("decreaseBtn");
     const resetBtn = document.getElementById("resetBtn");
