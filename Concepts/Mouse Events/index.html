@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        #myBox, #yourBox {
+            background-color: lightgreen;
+            width: 300px;
+            height: 300px;
+            font-size: 50px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="myBox">
+        Click Me 😀
+    </div>
+
+    <div id="yourBox">
+        CLICK ME
+    </div>
+
+<script>
+ // eventListner = listen for a speficic events to create interactive web pages
+ // events: click, mouseover, mouseout
+ // addEventListner (event, callback);
+
+ const myBox = document.getElementById("myBox");
+
+ function changeColor(event){
+    event.target.style.backgroundColor = "tomato";
+    event.target.textContent = "OUCH! 😥"
+ }
+
+ myBox.addEventListener("click", changeColor)
+
+const box = document.getElementById("yourBox");
+
+
+box.addEventListener("click", function(event){
+    event.target.style.backgroundColor = "tomato";
+    event.target.textContent = "OUCH! 😥";
+})
+
+box.addEventListener("mouseover", function(event){
+    event.target.style.backgroundColor = "yellow";
+    event.target.textContent = "Don't do it!";
+})
+
+box.addEventListener("mouseout", function(event){
+    event.target.style.backgroundColor = "lightgreen";
+    event.target.textContent = "CLICK ME";
+})
+
+
+
+
+</script>
+</body>
+</html>
