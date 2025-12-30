@@ -17,6 +17,17 @@
             border: solid 2px;
             font-size: 25px;
         }
+        #testing {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+        }
+        #testing button {
+            width: 100px;
+            background-color: lightgreen;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -39,6 +50,11 @@
         <li id="orange">orange</li>
         <li id="banana">banana</li>
     </ul>
+
+    <div id="testing">
+        <img id="myImg" src="/Projects/Digital Clock/Background.jpg">
+        <button id="myBtn">Hide</button>
+    </div>
 
 <script>
 // this is unrelated, just seeing if I can remember howt o
@@ -80,6 +96,22 @@ newListItem.style.fontWeight = "bold";
 newListItem.style.backgroundColor = "lightblue";
 
 document.getElementById("fruits").prepend(newListItem);
+
+const myImg = document.getElementById("myImg");
+const myBtn = document.getElementById("myBtn");
+
+myBtn.addEventListener("click", function(){
+
+    if(myImg.style.display === "none"){
+    myImg.style.display = "block";
+    myBtn.textContent = "hide";
+    }
+    else{
+    myImg.style.display = "none";
+    myBtn.textContent = "show";
+    }
+   
+})
 
 </script>
 </body>
