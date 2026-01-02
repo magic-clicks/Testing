@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            align-items: center;
+        }
+        .slider img {
+            width: 250px;
+            height: 500px;
+            display: none;
+        }
+        img.displaySlide {
+            display: block;
+        }
+        .slider button {
+            transform: translateY(-50%);
+            font-size: 25px;
+            margin: 30px;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="slider">
+        <div class="slides">
+            <img class="slide" src="/Image Slider/Max_cape_detail.png" alt="Max Cape">
+            <img class="slide" src="/Image Slider/Dizana's_max_cape_detail.png" alt="Max Cape">
+            <img class="slide" src="/Image Slider/Imbued_guthix_max_cape_detail.png" alt="Max Cape">
+            <img class="slide" src="/Image Slider/Infernal_max_cape_detail.png" alt="Max Cape">
+        </div>
+        <button class="previous" onclick="prevSlide()">⬅️</button>
+        <button class="next" onclick="nextSlide()">➡️</button>
+    </div>
+
+    <script>
+        // image slider
+
+        const slides = document.querySelectorAll(".slides img");
+        let slideIndex = 0;
+        let intervalID = null;
+
+        document.addEventListener("DOMContentLoaded", initializeSlider); // this waits for everything else to load
+
+        function initializeSlider(){
+
+            if(slides.length > 0){
+                slides[slideIndex].classList.add("displaySlide");
+                intervalID = setInterval(nextSlide, 5000);
+            }
+            
+    
+
+        }
+
+        function showSlide(index){
+
+            if(index >= slides.length){
+                slideIndex = 0;
+            }
+            else if(index < 0){
+                slideIndex = slides.length -1;
+            }
+
+            slides.forEach(slide => {
+                slide.classList.remove("displaySlide");
+            });
+            slides[slideIndex].classList.add("displaySlide");
+
+        }
+
+        function prevSlide(){
+            clearInterval(intervalID);
+            slideIndex--;
+            showSlide(slideIndex);
+        }
+
+        function nextSlide(){
+
+            slideIndex++;
+            showSlide(slideIndex);
+
+        }
+    </script>
+</body>
+</html>
