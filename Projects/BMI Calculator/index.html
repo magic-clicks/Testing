@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    
+<style> 
+    .bmi-calculator {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+</style>
+
+</head>
+<body>
+    
+    <div class="calculator-container">
+        <form class="bmi-calculator" action="">
+            <label for="height">Height (Inches):</label>
+            <input type="text" name="height" id="bmi-height">
+            <label for="weight">Weight (Pounds):</label>
+            <input type="text" name="weight" id="bmi-weight">
+            <button type="button" onclick="calc()">Calculate</button>
+            <p id="bmi-result"></p> 
+        </form>
+        
+    </div>
+
+
+
+<script>
+    //BMI Calculator
+
+    //BMI = weight (pounds) / [height (in)]2 x 703
+
+    const height = document.getElementById("bmi-height");
+    const weight = document.getElementById("bmi-weight");
+    const result = document.getElementById("bmi-result");   
+
+    
+
+    function calc(){
+        let CalcHeight = Number(height.value);
+        let CalcWeight = Number(weight.value);
+        result.textContent =  (CalcWeight / (CalcHeight ** 2) * 703);
+    }
+
+</script>
+
+
+</body>
+</html>
