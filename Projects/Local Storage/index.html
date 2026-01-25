@@ -15,7 +15,7 @@
     
 
     <div>
-        <label for="name-field">What is your name?</label>
+        <label id="name-label" for="name-field">What is your name?</label>
         <input type="text" name="name-field" id="name-field">
         <button id="name-submit">Submit</button>
         <p id="name-result"></p>
@@ -25,14 +25,19 @@
 <script>
 // learning and applying local storage concepts
 
+const label = document.getElementById("name-label");
 const name = document.getElementById("name-field");
 const nameSubmit = document.getElementById("name-submit");
 const nameResult = document.getElementById("name-result");
+
 
 const savedName = localStorage.getItem("username");
 
 if(savedName){
     nameResult.textContent = "Welcome back, " + savedName;
+    name.style.display = "none";
+    nameSubmit.style.display = "none";
+    label.style.display = "none";
 }
 
 nameSubmit.addEventListener("click", function(){
