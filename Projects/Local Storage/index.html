@@ -6,6 +6,9 @@
     <title>Local Storage</title>
 
 <style>
+.hidden {
+    display: none;
+}
 
 </style>
 
@@ -19,6 +22,7 @@
         <input type="text" name="name-field" id="name-field">
         <button id="name-submit">Submit</button>
         <p id="name-result"></p>
+        <button id="name-clear" class="hidden">Clear name</button>
     </div>
 
 
@@ -29,23 +33,29 @@ const label = document.getElementById("name-label");
 const name = document.getElementById("name-field");
 const nameSubmit = document.getElementById("name-submit");
 const nameResult = document.getElementById("name-result");
+const nameClear = document.getElementById("name-clear");
 
 
 const savedName = localStorage.getItem("username");
 
 if(savedName){
-    nameResult.textContent = "Welcome back, " + savedName;
+    nameResult.textContent = "Welcome back, " + savedName + "!";
     name.style.display = "none";
     nameSubmit.style.display = "none";
     label.style.display = "none";
+    nameClear.classList.remove("hidden");
 }
 
 nameSubmit.addEventListener("click", function(){
     const userName = name.value;
-    nameResult.textContent = "Your name is " + name.value;
     localStorage.setItem("username", name.value);
+    location.reload();
 });
 
+nameClear.addEventListener("click", function(){
+    localStorage.removeItem("username");
+    location.reload();
+});
     
 
 
