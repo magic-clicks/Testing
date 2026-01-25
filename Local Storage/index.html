@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+
+<style>
+
+</style>
+
+
+</head>
+<body>
+    
+
+    <div>
+        <label for="name-field">What is your name?</label>
+        <input type="text" name="name-field" id="name-field">
+        <button id="name-submit">Submit</button>
+        <p id="name-result"></p>
+    </div>
+
+
+<script>
+// learning and applying local storage concepts
+
+const name = document.getElementById("name-field");
+const nameSubmit = document.getElementById("name-submit");
+const nameResult = document.getElementById("name-result");
+
+const savedName = localStorage.getItem("username");
+
+if(savedName){
+    nameResult.textContent = "Welcome back, " + savedName;
+}
+
+nameSubmit.addEventListener("click", function(){
+    const userName = name.value;
+    nameResult.textContent = "Your name is " + name.value;
+    localStorage.setItem("username", name.value);
+});
+
+    
+
+
+
+
+</script>
+
+
+</body>
+</html>
