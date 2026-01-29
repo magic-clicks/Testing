@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Panel</title>
+
+    <style>
+        .panel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            gap: 10px;
+        }
+        input {
+            width: 25px;
+            height: 25px;
+        }
+        #range-slider {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="panel">
+            <label for="color">Choose a background color:</label>
+            <input id="color-selector" type="color">
+            <label for="font-size">Scale font size:</label>
+            <input id="range-slider" type="range" min="12" max="50">
+        </div>
+
+    </div>
+
+    <script>
+        // settings panel
+        const color = document.getElementById("color-selector");
+        const fontSize = document.getElementById("range-slider");
+
+        color.addEventListener("input", function(e){
+            document.body.style.backgroundColor = e.target.value;
+        });
+
+        fontSize.addEventListener("input", function(){
+            document.body.style.fontSize = this.value + "px";
+        });
+
+    </script>
+</body>
+</html>
