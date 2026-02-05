@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+    }
+    main {
+        flex: 1;
+        background-color: #DC362D;
+        
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .container h1 {
+        
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        padding: 150px;
+        background: url(./Hearts.gif);
+        background-repeat: no-repeat;
+        background-position:top;
+        background-size: cover;
+        
+    }
+    .card button {
+        padding: 25px;
+        border-radius: 50px;
+        color: white;
+        background-color: darkred;
+    }
+</style>
+
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="card">
+                <h1>Be Mine?</h1>
+                <div>
+                    <button id="yesBtn">Yes</button>
+                    <button id="noBtn">No</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+<script>
+
+const yes = document.getElementById("yesBtn");
+const no = document.getElementById("noBtn");
+
+let clicked = false;
+
+
+yes.addEventListener("mouseover", function(){
+    no.style.display = "none";
+})
+
+yes.addEventListener("click", function(){
+    yes.textContent = "I Love You";
+    clicked = true;
+    no.style.display = "none";
+}) 
+
+yes.addEventListener("mouseout", function(){
+    
+    if(clicked === true){
+        no.style.display = "none";
+    }
+    else{
+        no.style.display = "";
+    }
+    
+})
+
+
+
+</script>
+
+</body>
+</html>
