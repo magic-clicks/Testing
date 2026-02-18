@@ -4,57 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Clock</title>
-    <style>
-        * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    }
-    body {
-        background-image: url(./Background.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed; 
-    }
-    #clock-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    #clock {
-        font-size: 6.5rem;
-        font-weight: bold;
-        text-align: center;
-    }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="clock-container">
         <div id="clock">00:00:00</div>
     </div>
 
-    <script>
-        // Digital clock program
-
-    function updateClock(){
-
-        const now = new Date();
-        let hours = now.getHours();
-        const meridiem = hours >= 12 ? "PM" : "AM";
-        hours = hours % 12 || 12;
-        hours = hours.toString().padStart(2, 0);
-        const minutes = now.getMinutes().toString().padStart(2, 0);
-        const seconds = now.getSeconds().toString().padStart(2, 0);
-        const timeString = `${hours}:${minutes}:${seconds} ${meridiem}`;
-        document.getElementById("clock").textContent = timeString;
-
-    }
-
-    updateClock();
-    setInterval(updateClock, 1000);
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>

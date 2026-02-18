@@ -4,31 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number Counter</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .numberCounter {
-           text-align: center; 
-           padding: 10px;
-           border-radius: 5px;
-        }
-        #btnContainer {
-            display: flex;
-            justify-content: space-evenly;
-            gap: 5px;
-            padding: 10px;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="numberCounter">
@@ -41,29 +17,6 @@
             </div>
     </div>
     
-    <script>
-    // Next Script for number counter
-    // very basic
-
-    const decreaseBtn = document.getElementById("decreaseBtn");
-    const resetBtn = document.getElementById("resetBtn");
-    const increaseBtn = document.getElementById("increaseBtn");
-    const countLabel = document.getElementById("countLabel");
-    let count = 0
-
-    increaseBtn.onclick = function(){
-        count ++;
-        countLabel.textContent = count;
-    }
-    resetBtn.onclick = function(){
-        count = 0;
-        countLabel.textContent = count;
-    }
-    decreaseBtn.onclick = function(){
-        count --;
-        countLabel.textContent = count;
-    }
-
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>

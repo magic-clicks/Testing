@@ -1,0 +1,15 @@
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 10px;
+}
+input {
+    width: 25px;
+    height: 25px;
+}
+#range-slider {
+    width: 100px;
+}

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+}
+.slider img {
+    width: 250px;
+    height: 500px;
+    display: none;
+}
+img.displaySlide {
+    display: block;
+}
+.slider button {
+    transform: translateY(-50%);
+    font-size: 25px;
+    margin: 30px;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+}

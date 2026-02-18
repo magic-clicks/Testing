@@ -1,0 +1,108 @@
+console.log('test');
+
+const button = document.getElementById("myButton");
+
+const messages = [
+    "Haha you clicked me",
+    "Clicky",
+    "Click me again!",
+    "You're a sicko!",
+    "Click me",
+    "This is a button",
+    "Can't believe it's not butter",
+    "Try clicking another button!",
+    "Haha you clicked me!",
+    "Stop it, I'm ticklish!",
+    "Clicky clicky!",
+    "Do you really want to do this?",
+    "Why are you like this?",
+    "You again?!",
+    "I feel loved...",
+    "One more time won’t hurt… maybe",
+    "Careful, it bites!",
+    "You're relentless!",
+    "Don't tell anyone, but I like it",
+    "Click me harder!",
+    "Seriously, stop clicking me",
+    "I’m not a toy… am I?",
+    "You’re testing my patience",
+    "I’ve seen things… click things",
+    "Clickception!",
+    "Are we having fun yet?",
+    "You’re unstoppable",
+    "Click me like you mean it",
+    "I knew this would happen",
+    "Okay, that’s enough… just kidding",
+    "My button heart is full",
+    "You must be bored",
+    "Clickity-clack, clickity-clack!"
+];
+
+
+function change() {
+
+const random = Math.floor(Math.random() * messages.length);
+button.textContent = messages[random];
+
+}
+
+const crazyButton = document.getElementById("crazyButton");
+
+crazyButton.addEventListener("click", function(){
+
+if(crazyButton.textContent === "Click Me Again"){
+    crazyButton.textContent = "Click Him <--";
+}
+else if(crazyButton.textContent === "Click Him <--"){
+    crazyButton.textContent = "Click Him -->";
+}
+else{
+    crazyButton.textContent = "Click Me Again";
+}
+
+})
+
+const sillyButton = document.getElementById("sillyButton");
+
+buttonMoves = [
+
+"translate(300px, 300px)",
+"translate(-300px, -300px)",
+"translate(-300px, 300px)",
+"translate(300px, -300px)",
+
+]
+
+sillyButton.addEventListener("mouseover", function(){
+sillyButton.textContent = "Gotta be quicker than that!";
+})
+
+sillyButton.addEventListener("click", function(){
+sillyButton.textContent = "But how fast can you click?";
+const moveButton = Math.floor(Math.random() * buttonMoves.length);
+sillyButton.style.transform = buttonMoves[moveButton];
+} )
+
+const backroundButton = document.getElementById("backgroundColor");
+
+colors = [
+"black",
+"red",
+"blue",
+"green",
+"purple",
+"aquamarine",
+"gray",
+"yellow",
+"orange",
+"lightblue",
+"skyblue",
+"white",
+"brown",
+"pink",
+]
+
+backroundButton.addEventListener("click", function(){
+const colorChange = Math.floor(Math.random() * colors.length);
+document.body.style.backgroundColor = colors[colorChange];
+})

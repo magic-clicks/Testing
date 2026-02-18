@@ -4,48 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Roller</title>
-    <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    }
-    #container {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: bold;
-    }
-    button {
-        font-size: 1.5rem;
-        padding: 10px 15px;
-        border: none;
-        background-color: skyblue;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 10px;
-    }
-    button:hover {
-        background-color: blue;
-    }
-    button:active {
-        background-color: darkblue;
-    }
-    input {
-        font-size: 2rem;
-        width: 150px;
-        text-align: center;
-        font-weight: bold;
-    }
-    #diceResult {
-        margin: 25px;
-    }
-    #diceImages img{
-        width: 150px;
-        margin: 5px;
-}
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="container">
@@ -56,27 +15,8 @@
         <div id="diceResult"></div>
         <div id="diceImages"></div>
     </div>
-    <script>
-        console.log("test");
 
-    // Dice Roller Program
 
-    function rollDice(){
-
-        const numOfDice = document.getElementById("numOfDice").value;
-        const diceResult = document.getElementById("diceResult");
-        const diceImages = document.getElementById("diceImages");
-        const values = [];
-        const images = [];
-
-        for(let i = 0; i < numOfDice; i++){
-            const value = Math.floor(Math.random() * 6) + 1;
-            values.push(value);
-            images.push(`<img src="Photos/Dice ${value}.png" alt=Dice${value}>`);
-        }
-        diceResult.textContent = `Dice ${values.join(`, `)}`
-        diceImages.innerHTML = images.join(` `);
-    }
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>

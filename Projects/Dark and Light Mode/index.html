@@ -4,32 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toggle</title>
-    <style>
-        * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    }
-    body {
-        font-family: sans-serif;
-        background-color: lightgray;
-        color: black;
-        padding: 20px;
-        transition: background-color .3s, color .3s; /* Smooths transition*/
-    }
-
-    .dark-mode {
-        background-color: black;
-        color: white;
-    }
-
-    button {
-        padding: 10px;
-        cursor: pointer;
-        border: solid black 1px;
-        background-color: #fff;
-    }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>Toggle Dark / Light Mode</h1>
@@ -38,23 +13,7 @@
     <br>
     <button id="themeToggle">Switch to Dark Mode</button>
     <br>
-    <script>
-    console.log("Test")
 
-    const toggleButton = document.getElementById("themeToggle");
-    const body = document.body;
-
-    toggleButton.addEventListener(`click`, function(){
-
-        body.classList.toggle(`dark-mode`);
-        
-        if(body.classList.contains(`dark-mode`)){
-            toggleButton.textContent = `Switch to Light Mode`;
-        }
-        else{
-            toggleButton.textContent = `Switch to Dark Mode`;
-        }
-    })
-    </script>
+<script src="./script.js"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax & Tip Calculators</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="tipCalculator">
+        <h1>Tip Calculator</h1>
+        <h3>Bill total</h3>
+        <input type="number" id="tip" value="0">
+        <input type="radio" id="tenPercent" name="tipUnit">
+        <label for="tenPercent">10 Percent</label>
+        <input type="radio" id="fifteenPercent" name="tipUnit">
+        <label for="fifteenPercent">15 Percent</label>
+        <input type="radio" id="twentyPercent" name="tipUnit">
+        <label for="twentyPercent">20 Percent</label>
+        <input type="radio" id="twentyFivePercent" name="tipUnit">
+        <label for="twentyFivePercent">25 Percent</label>
+        <button type="button" onclick="tipCalculator()">Submit</button>
+        <p id="percentResult"></p>
+
+    </div>
+    <div class="taxCalculator">
+        <h1>Sales Tax Calculator</h1>
+        <p>Calculate the total amount of your purchase including the state, city, and county sales tax.</p>
+        <h3>Amount</h3>
+        <input type="number" id="preTaxTotal" name="taxUnit">
+        <button type="submit" id="taxSubmit">Submit</button>
+        <p id="taxResult"></p>
+    </div>
+
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
