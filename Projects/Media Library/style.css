@@ -43,7 +43,7 @@ main {
 }
 .movies-card, .television-card, .wishlist-card {
     display: flex;
-    min-height: 750px; /* adding this for now to see the boxes*/
+    min-height: 100px; /* adding this for now to see the boxes*/
     width: 75%;
     border: solid black 2px;
     border-radius: 25px;
@@ -52,7 +52,7 @@ main {
     display: flex;
     flex-wrap: wrap;
 }
-.movie-grid {
+.movie-grid, .tv-grid {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

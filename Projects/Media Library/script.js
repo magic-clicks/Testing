@@ -177,6 +177,26 @@ function displayCatalog() {
 
 displayCatalog();
 
+const tvGrid = document.getElementById("tv-grid");
+
+function displayTvCatelog(){
+
+    tvGrid.innerHTML = "";
+
+    tv.forEach(tv =>{
+
+        const card = document.createElement('div');
+        card.classList.add("movie-card");
+
+        card.innerHTML = `
+        <h3>${tv}<h3>
+        `
+        tvGrid.appendChild(card);
+    })
+}
+
+displayTvCatelog();
+
 
 movieBtn.addEventListener("click", function(){
     const randomMovies = Math.floor(Math.random() * movies.length);
