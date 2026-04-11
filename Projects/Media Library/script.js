@@ -154,6 +154,30 @@ tv = [
 ];
 
 
+const gridContainer = document.getElementById('movie-grid');
+
+function displayCatalog() {
+  
+  gridContainer.innerHTML = "";
+
+  movies.forEach(movie => {
+    
+    const card = document.createElement('div');
+    card.classList.add('movie-card');
+
+    
+    card.innerHTML = `
+      <h3>${movie}</h3>
+      
+    `;
+
+    gridContainer.appendChild(card);
+  });
+}
+
+displayCatalog();
+
+
 movieBtn.addEventListener("click", function(){
     const randomMovies = Math.floor(Math.random() * movies.length);
     const selectedMovie = movies[randomMovies];
@@ -169,4 +193,3 @@ tvBtn.addEventListener("click", function(){
     tvResult.textContent = selectedTv;
 
 });
-
