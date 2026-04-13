@@ -39,13 +39,12 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 .movies-card, .television-card, .wishlist-card {
     display: flex;
     min-height: 100px; /* adding this for now to see the boxes*/
     width: 75%;
-    border: solid black 2px;
+    border: solid black 1px;
     border-radius: 25px;
 }
 .movies {

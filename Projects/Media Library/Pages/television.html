@@ -21,9 +21,70 @@
     </header>
     <main>
 
+        <div class="television">
+            <h1>TV Shows</h1>
+            <div class="television-card">
+
+                <div id="tv-grid" class="tv-grid"></div>
+
+            </div>
+        </div>
         
     </main>
 
+<script>
 
+    tv = [
+    "Avatar: The Last Air Bender",
+    "Brooklyn Nine-Nine",
+    "The Office",
+    "The West Wing",
+
+    ];
+
+    const tvGrid = document.getElementById("tv-grid");
+
+    function displayTvCatelog(){
+
+    
+
+    tv.forEach(tv =>{
+
+        const card = document.createElement('div');
+        card.classList.add("movie-card");
+
+        card.innerHTML = `
+        <h3>${tv}<h3>
+        `
+        tvGrid.appendChild(card);
+    })
+    }
+
+    displayTvCatelog();
+
+    const gridContainer = document.getElementById('movie-grid');
+
+    function displayCatalog() {
+    
+    gridContainer.innerHTML = "";
+
+    movies.forEach(movie => {
+        
+        const card = document.createElement('div');
+        card.classList.add('movie-card');
+
+        
+        card.innerHTML = `
+        <h3>${movie}</h3>
+        
+        `;
+
+        gridContainer.appendChild(card);
+    });
+    }
+
+    displayCatalog();
+
+</script>
 </body>
 </html>
