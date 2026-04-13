@@ -175,6 +175,29 @@
         "Zootopia",
 
     ];
+
+    const gridContainer = document.getElementById('movie-grid');
+
+    function displayCatalog() {
+    
+    gridContainer.innerHTML = "";
+
+    movies.forEach(movie => {
+        
+        const card = document.createElement('div');
+        card.classList.add('movie-card');
+
+        
+        card.innerHTML = `
+        <h3>${movie}</h3>
+        
+        `;
+
+        gridContainer.appendChild(card);
+    });
+    }
+
+    displayCatalog();
 </script>
 </body>
 </html>
